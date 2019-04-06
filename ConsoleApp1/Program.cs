@@ -19,16 +19,26 @@ namespace ConsoleApp1
             p.Beowulf = new ArrayList();
             p.Wordskipper();
             Console.ReadLine();
+
+
         }
+
+
         public void Run() { this.ReadTextFiles(); }
         public void ReadTextFiles()
+
+
         {
             // Read file using StreamReader. Reads file line by line
             using (StreamReader file = new StreamReader("U:/Users/730228/assignment 4/ConsoleApp1/ConsoleApp1/Beowulf.txt"))
+
+
             {
                 int counter = 0;
                 string ln;
                 while ((ln = file.ReadLine()) != null)
+
+
                 {
                     Console.WriteLine(ln);
                     Beowulf.Add(ln);
@@ -59,6 +69,8 @@ namespace ConsoleApp1
             int f = 0;
             foreach (var line in File.ReadAllLines("U:/Users/730228/assignment 4/ConsoleApp1/ConsoleApp1/Beowulf.txt"))
             {
+
+
                 f++;
                 if (line.Contains("fare") && (!line.Contains("war")))
                 {
@@ -80,7 +92,9 @@ namespace ConsoleApp1
                     if (char.IsWhiteSpace(c)) { countSpaces++; }
 
                 }
-                return countSpaces;
+
+
+            return countSpaces;
             }
         }
     }
