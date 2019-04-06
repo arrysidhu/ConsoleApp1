@@ -1,0 +1,16 @@
+section A
+how many lines in total are there in the files:
+4016 lines.
+Section B
+how many WORDS are there in the files:
+
+Section C
+Line numbers of the lines which contaib BOTH of these words:
+Sea and Fare (cover both upper and lower case)
+
+section D
+Line numbers  of the lines which contain the word: Fare
+Without the word: War
+
+section E
+Average number of letters per word returned as a float 
