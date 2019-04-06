@@ -17,9 +17,9 @@ namespace ConsoleApp1
         {
             Program p = new Program();
             p.Beowulf = new ArrayList();
-            p.Wordfinder();
+            p.Wordskipper();
             Console.ReadLine();
-                   }
+        }
         public void Run() { this.ReadTextFiles(); }
         public void ReadTextFiles()
         {
@@ -37,7 +37,7 @@ namespace ConsoleApp1
                 }
                 file.Close();
                 Console.WriteLine($"File has {counter} lines.");
-                Console.WriteLine($"File has {counter*10} words.");
+                Console.WriteLine($"File has {counter * 10} words.");
 
 
             }
@@ -54,20 +54,34 @@ namespace ConsoleApp1
             }
             Console.WriteLine(f);
         }
-
-        public int FindNumberOfBlankSpaces(string line)
+        public void Wordskipper()
         {
-            // hhtp://stackovrflow.com/questions/17812566/count-words-and-spaces-in-string-c-sharp
-            int countletter = 0;
-            int countSpaces = 0;
-             foreach (char c in line)
-
+            int f = 0;
+            foreach (var line in File.ReadAllLines("U:/Users/730228/assignment 4/ConsoleApp1/ConsoleApp1/Beowulf.txt"))
             {
-                if (char.IsLetter(c)) { countletters++; }
-                if (char.IsWhiteSpace(c)) { countSpaces++; }
+                f++;
+                if (line.Contains("fare") && (!line.Contains("war")))
+                {
+                    Console.WriteLine(f);
+                }
 
             }
-            return countSpaces;
+        }
+
+            public int FindNumberOfBlankSpaces(string line)
+            {
+                // hhtp://stackovrflow.com/questions/17812566/count-words-and-spaces-in-string-c-sharp
+                int countletter = 0;
+                int countSpaces = 0;
+                foreach (char c in line)
+
+                {
+                    if (char.IsLetter(c)) { countletters++; }
+                    if (char.IsWhiteSpace(c)) { countSpaces++; }
+
+                }
+                return countSpaces;
+            }
         }
     }
-}
+
