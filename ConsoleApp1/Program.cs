@@ -17,12 +17,14 @@ namespace ConsoleApp1
         {
             Program p = new Program();
             p.Beowulf = new ArrayList();
+            p.ReadTextFiles();
+            Console.ReadLine();
                    }
         public void Run() { this.ReadTextFiles(); }
         public void ReadTextFiles()
         {
             // Read file using StreamReader. Reads file line by line
-            using (StreamReader file = new StreamReader("c:/area51/beowulf.txt"))
+            using (StreamReader file = new StreamReader("U:/Users/730228/assignment 4/ConsoleApp1/ConsoleApp1/Beowulf.txt"))
             {
                 int counter = 0;
                 string ln;
@@ -30,6 +32,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine(ln);
                     Beowulf.Add(ln);
+                    counter++;
 
                 }
                 file.Close();
